@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "19.04.24 自走棋测试服更新"
-subtitle: 'Test Server Patch Note'
-author: "Unnamed_User"
-header-style: text
+title: 		"19.04.24 自走棋测试服更新"
+subtitle: 	"Test Server Patch Note"
+author: 	"Unnamed_User"
 header-img: "img/post-bg-autochess-courier.jpg"
+header-mask: 0.4
 tags:
   - Test Server
   - 暗影牧师

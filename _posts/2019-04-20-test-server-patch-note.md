@@ -5,6 +5,7 @@ subtitle: 	"Test Server Patch Note"
 date:		"2019-04-20"
 author: 	"Unnamed_User"
 header-img: "img/post-bg-autochess-courier.jpg"
+header-mask: 0.4
 tags:
   - Test Server
   - 糖果商店

@@ -19,6 +19,7 @@ github_username:
 twitter_username:   
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
+heybox_username:    15931489
 
 
 
@@ -107,7 +108,7 @@ friends: [
     #     title: "Su",
     #     href: "http://su.gallery/"
     # },{
-        title: "自走棋碎碎念",
+        title: "自走棋的碎碎念",
         href: "https://zizouqi.github.io"
     },{
         title: "我的微博",

@@ -16,7 +16,7 @@ tags:
 - 在流局投票中，高排位玩家的投票有更高权重了。
 - 结算面板大改：棋子星级更直观了；会显示触发的羁绊；对其他信使造成总伤害；天梯排名是上升还是下降。
 
-![结算面板](/img/in-post/post-190424/end.png)
+![结算面板](/img/in-post/post-190424/end.jpg)
 
 ---
 ### 4 月 24 日 12:56 更新
@@ -46,9 +46,9 @@ tags:
 #### 外观/特效：
 - 修改了二、三星暗影牧师的饰品搭配。
 
-![暗影牧师技能“薄葬”](/img/in-post/post-190424/shallow-grave.png)
-![牧师技能“障”](/img/in-post/post-190424/priest.png)
-![暗影牧师](/img/in-post/post-190424/dazzle.png)
+![暗影牧师技能“薄葬”](/img/in-post/post-190424/shallow-grave.jpg)
+![牧师技能“障”](/img/in-post/post-190424/priest.jpg)
+![暗影牧师](/img/in-post/post-190424/dazzle.jpg)
 
 ---
 ### 4 月 22 日 01:05 更新
@@ -62,4 +62,4 @@ tags:
 - 在即将战斗阶段会有特效显示场上棋子的星级。
 - SSR 棋子有特殊的星级特效。
 
-![新特效](/img/in-post/post-190424/star.png)
+![新特效](/img/in-post/post-190424/star.jpg)

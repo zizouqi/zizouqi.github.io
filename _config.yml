@@ -14,13 +14,13 @@ future: true
 # SNS settings
 RSS: false
 weibo_username:     unnameduser
-zhihu_username:     
+zhihu_username:     404
 github_username:    
 twitter_username:   
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
-xiaoheihe_username: 15931489
 iyingdi_username:   11561075
+xiaoheihe_username: 15931489
 
 
 

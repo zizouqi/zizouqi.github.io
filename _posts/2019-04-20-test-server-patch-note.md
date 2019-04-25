@@ -3,6 +3,7 @@ layout: post
 title: "19.04.20 自走棋测试服更新"
 subtitle: 'Test Server Patch Note'
 author: "Unnamed_User"
+header-img: "img/post-bg-autochess-courier.jpg"
 header-style: text
 tags:
   - Test Server

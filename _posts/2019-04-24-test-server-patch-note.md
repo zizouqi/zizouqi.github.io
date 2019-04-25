@@ -4,6 +4,7 @@ title: "19.04.24 自走棋测试服更新"
 subtitle: 'Test Server Patch Note'
 author: "Unnamed_User"
 header-style: text
+header-img: "img/post-bg-autochess-courier.jpg"
 tags:
   - Test Server
   - 暗影牧师

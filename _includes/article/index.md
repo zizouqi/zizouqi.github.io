@@ -9,6 +9,6 @@
 
 #### 栾东小说整理
 
-- [以后会想起三叔吗][1] 2008 
+- [以后会想起三叔吗][1] · 2008 
 
-[1]: _includes/article/2019-04-25-3rd-uncle.md
+[1]: /_includes/article/2019-04-25-3rd-uncle.md

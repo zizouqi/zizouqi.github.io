@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 		"19.04.20 自走棋测试服更新"
-subtitle: 	"Test Server Patch Note"
+subtitle: 	"Test Server Patch Note 4.20"
 date:		"2019-04-20"
 author: 	"Unnamed_User"
 header-img: "img/post-bg-autochess-courier.jpg"

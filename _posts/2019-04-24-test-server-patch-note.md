@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 		"19.04.27 自走棋测试服更新"
-subtitle: 	"Test Server Patch Note"
+subtitle: 	"Test Server Patch Note 4.27"
 author: 	"Unnamed_User"
 header-img: "img/post-bg-autochess-courier.jpg"
 header-mask: 0.4

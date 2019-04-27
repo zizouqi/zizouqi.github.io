@@ -109,6 +109,9 @@ friends: [
     #     title: "Su",
     #     href: "http://su.gallery/"
     # },{
+        title: "互联网档案馆",
+        href: "https://archive.org/"
+    },{
         title: "岁岁年年碎碎念",
         href: "https://zizouqi.github.io"
     },{

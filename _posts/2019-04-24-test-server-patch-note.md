@@ -6,6 +6,8 @@ author: 	"Unnamed_User"
 header-img: "img/post-bg-autochess-courier.jpg"
 header-mask: 0.4
 tags:
+  - AutoChess
+  - 自走棋
   - Test Server
   - 暗影牧师
   - 精灵守卫

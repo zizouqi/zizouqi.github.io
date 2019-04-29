@@ -112,9 +112,9 @@ friends: [
         title: "互联网档案馆",
         href: "https://archive.org/"
     },{
-        title: "DAC UI Mod",
-        href: "https://github.com/auto-chess-ui-mod/download"
-    },{
+    #    title: "DAC UI Mod",
+    #    href: "https://github.com/auto-chess-ui-mod/download"
+    #},{
         title: "我的微博",
         href: "https://www.weibo.com/u/6230917691"
     }

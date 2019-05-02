@@ -21,7 +21,7 @@
 
 [0801]: /2019/04/25/3rd-uncle
 [0802]: /2019/05/02/yau-tsai
-[0703]: /2019/04/29/farewell-to-the-piano
+[0703]: /2019/05/02/farewell-to-the-piano
 [0701]: /2019/04/29/a-simple-guide-on-love
 [0501]: /2019/05/02/if
 [0401]: /2019/04/29/beauty

@@ -25,14 +25,14 @@ tags:
 #### 全信使模型 All Couriers： 
 [第一期 (Ep.1)][1] 　　 [第二期 (Ep.2)][2] 　　 [第三期 (Ep.3)][3] 　　 [第四期 (Ep.4)][4] 　　 [第五期 (Ep.5)][5] 　　 ……
 
-<table frame="void" rules="none" width="auto">
+<table frame="void" rules="none">
 	<tr>
-		<td width="1px" style="white-space: nowrap; word-break: keep-all;">[第一期 (Ep.1)]</td>
-		<td>[第二期 (Ep.2)]</td>
+		<td width="1px" style="white-space: nowrap; word-break: keep-all;">第一期 (Ep.1)</td>
+		<td width="1px" style="white-space: nowrap; word-break: keep-all;">第二期 (Ep.2)</td>
 	</tr>
 	<tr>
-		<td>[第三期 (Ep.3)]</td>
-		<td>[第四期 (Ep.4)]</td>
+		<td width="1px" style="white-space: nowrap; word-break: keep-all;">第三期 (Ep.3)</td>
+		<td width="1px" style="white-space: nowrap; word-break: keep-all;">第四期 (Ep.4)</td>
 	</tr>
 </table>
 　

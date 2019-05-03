@@ -18,7 +18,7 @@ tags:
 ---
 
 #### 全特效 All Effects： 
-[链接(Link)](http://t.cn/ExYaXF4) 
+[链接 (Link)](http://t.cn/ExYaXF4) 
 
 　
 

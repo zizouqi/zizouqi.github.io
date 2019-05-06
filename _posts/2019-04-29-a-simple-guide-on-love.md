@@ -4,6 +4,7 @@ title:      "简明恋爱指南"
 subtitle:   "A Simple Guide on Love"
 author:  "Unnamed_User"
 header-style: text
+hide-in-home: "true"
 tags:
   - 栾东
   - 小说

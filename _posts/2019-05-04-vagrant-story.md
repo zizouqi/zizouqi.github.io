@@ -4,6 +4,7 @@ title:      "他二叔的故事"
 subtitle:   "Vagrant Story"
 author:  "Unnamed_User"
 header-style: text
+hide-in-home: "true"
 tags:
   - 栾东
   - 小说

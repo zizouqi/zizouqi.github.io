@@ -4,6 +4,7 @@ title:      "さらばピアノよ"
 subtitle:   "Farewell to the Piano"
 author:  "Unnamed_User"
 header-style: text
+hide-in-home: "true"
 tags:
   - 栾东
   - 小说

@@ -3,6 +3,7 @@ layout: page
 description: "关于自走棋和其他的碎碎念"
 ---
 
+{% total_posts = 0 %}
 {% for post in paginator.posts %}
     {% if post.hide-in-home != 'true' %}
     <div class="post-preview">
@@ -30,11 +31,13 @@ description: "关于自走棋和其他的碎碎念"
         </p>
     </div>
     <hr>
+    {% total_posts = total_posts + 1 %}
     {% endif %}
 {% endfor %}
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
+<!-- Pager 
+{% if paginator.total_pages > 1 %} -->
+{% if paginator.total_posts > 10 %}
 <ul class="pager">
     {% if paginator.previous_page %}
     <li class="previous">

@@ -4,7 +4,7 @@ description: "关于自走棋和其他的碎碎念"
 ---
 
 {% for post in paginator.posts %}
-    {% if post.hide-in-home != 'true' %}
+    {% if post.hide-in-home == 'true' %}
     <div class="post-preview">
         <a href="{{ post.url | prepend: site.baseurl }}">
             <h2 class="post-title">

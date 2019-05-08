@@ -3,7 +3,7 @@ layout: post
 title: 		"矮人狙击手和卓尔游侠 DPS 对比"
 subtitle: 	"DPS Comparison of Sniper and Drow"
 author: 	"Unnamed_User"
-header-img: "img/in-post/post-sniper-drow-dps/drow.jpg"
+header-img: "img/in-post/post-sniper-drow-dps/drow2.jpg"
 header-mask: 0.2
 tags:
   - AutoChess

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 		"狙击手和卓尔游侠 DPS 对比"
-subtitle: 	"DPS Comparison of Sniper and Drow"
+subtitle: 	"DPS Comparison between Sniper and Drow"
 author: 	"Unnamed_User"
 header-img: "img/in-post/post-sniper-drow-dps/drow2.jpg"
 header-mask: 0.2

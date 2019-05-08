@@ -12,7 +12,7 @@ tags:
   - 指南
 ---
 
-先贴个表，说明和实测空了再发。
+先贴个表，说明和实测等周末空了再发。
 
 ![DPS Table](/img/in-post/post-sniper-drow-dps/table.png)
 

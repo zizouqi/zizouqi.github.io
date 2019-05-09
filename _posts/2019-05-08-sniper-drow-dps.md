@@ -14,5 +14,5 @@ tags:
 
 先贴个表，说明和实测等周末空了再发。
 
-![DPS Table](/img/in-post/post-sniper-drow-dps/table.png)
+[![DPS Table](/img/in-post/post-sniper-drow-dps/table.png)](https://zizouqi.github.io/img/in-post/post-sniper-drow-dps/table.png)
 

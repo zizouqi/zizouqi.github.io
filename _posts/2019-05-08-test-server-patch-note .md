@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 		"19.05.07 自走棋测试服更新"
-subtitle: 	"Test Server Patch Note S01W01"
+title: 		"19.05.08 自走棋测试服更新"
+subtitle: 	"AutoChess Test Server Patch Note S01W01"
 author: 	"Unnamed_User"
 header-img: "img/post-bg-autochess-courier.jpg"
 header-mask: 0.4
@@ -11,13 +11,19 @@ tags:
   - Test Server
 ---
 
-预计待英语等语言本地化工作完成后发布。
 
-<!--
 此文章允许转载及编摘。  
 转载或编摘时请注明原作者并附上微博链接：[@Unnamed_User](https://weibo.com/unnameduser)
 
 
+### 5 月 8 日 21:44
+#### 游戏性：
+- 调整了弹幕显示效果，并且在棋子合成提示中加入了图标。
+
+#### 平衡性：
+- 使用黑皇杖时有魔法免疫效果了。
+
+---
 ### 5 月 8 日 13:02
 #### 游戏性：
 - 在道具使用队列中，将黑皇杖、刃甲的优先级提到了最高。（理论上先使用黑皇杖、刃甲可以免疫羊刀的效果，或反弹红杖的伤害。）
@@ -64,4 +70,3 @@ tags:
 ### 5 月 1 日 20:59 更新
 #### 游戏性：
 - 将巫妖的技能替换为了“霜冻护甲”：为一个友方单位制造一层寒冰护甲，增加 4/6/8 护甲值，对其发动攻击的敌方单位会被降低攻击速度 20/30/40。（巫妖目前仍在小黑屋中）
--->

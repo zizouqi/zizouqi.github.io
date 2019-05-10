@@ -40,9 +40,13 @@ end
 
 显然是因为 `FindAClosestEnemyAndAttack(u)` 为空，所以导致了棋子进行移动。 
 接下来分析下这个函数，函数中判断射程范围内是否有敌人的条件是： 
-```(u.attack_target:GetAbsOrigin() - u:GetAbsOrigin()):Length2D() < u:Script_GetAttackRange() - u.attack_target:GetHullRadius()``` 
+```
+(u.attack_target:GetAbsOrigin() - u:GetAbsOrigin()):Length2D() < u:Script_GetAttackRange() - u.attack_target:GetHullRadius()
+``` 
 以及： 
-```d < attack_range - v:GetHullRadius()```
+```
+d < attack_range - v:GetHullRadius()
+```
 
 分析了下这个条件可能出错的原因有两个：
 1. 条件中仅考虑了目标的单位半径，是否也应该算上攻击者的单位半径。
@@ -53,9 +57,13 @@ end
 ![Distance](/img/in-post/post-autochess-code-optimization/distance.jpg)
 
 将距离判断条件修改为 
-```(u.attack_target:GetAbsOrigin() - u:GetAbsOrigin()):Length2D() < u:Script_GetAttackRange() + u.attack_target:GetHullRadius() + u:GetHullRadius()``` 
+```
+(u.attack_target:GetAbsOrigin() - u:GetAbsOrigin()):Length2D() < u:Script_GetAttackRange() + u.attack_target:GetHullRadius() + u:GetHullRadius()
+``` 
 以及 
-```d < attack_range + v:GetHullRadius() + u:GetHullRadius()``` 
+```
+d < attack_range + v:GetHullRadius() + u:GetHullRadius()
+``` 
 之后，棋子便不会再进行多余的移动。
 
  

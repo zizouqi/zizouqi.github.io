@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 		"自走棋代码优化，避免棋子无意义移动、重复抬手"
+title: 		"自走棋代码优化：避免棋子无意义移动、重复抬手"
 subtitle: 	"AutoChess Code Optimization"
 author: 	"Unnamed_User"
 header-img: "img/post-bg-code.jpg"

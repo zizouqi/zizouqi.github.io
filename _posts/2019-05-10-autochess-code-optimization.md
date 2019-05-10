@@ -24,7 +24,7 @@ tags:
 
 自走棋代码中，是通过 `local attack_result = FindAClosestEnemyAndAttack(u)` 的结果来判断棋子是进行攻击还是移动： 
 
-```
+```lua
 --决定是否要攻击 
 local attack_result = FindAClosestEnemyAndAttack(u) 
 if attack_result ~= nil and attack_result > 0 then 
@@ -33,7 +33,7 @@ end
 --不攻击就走动 
 if attack_result == nil then 
 	--寻路 
-	(略) 
+	--(略) 
 	return RandomFloat(0.5,1) + ai_delay
 else
 	return 1 + ai_delay

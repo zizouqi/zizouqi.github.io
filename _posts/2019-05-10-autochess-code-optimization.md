@@ -42,16 +42,16 @@ end
 *（上面的第二个 if 也许改成 elseif 更好。）*
 
 显然是因为 `FindAClosestEnemyAndAttack(u)` 为空，所以导致了棋子进行移动。  
-接下来分析下这个函数，函数中判断射程范围内是否有敌人的逻辑条件是“**单位间距离**小于**射程减目标单位半径**”：  
+接下来看看这个函数，函数中判断射程范围内是否有敌人的逻辑条件是“**单位间距离**小于**射程减目标单位半径**”：  
 `(u.attack_target:GetAbsOrigin() - u:GetAbsOrigin()):Length2D() < u:Script_GetAttackRange() - u.attack_target:GetHullRadius()`   
 以及：  
 `d < attack_range - v:GetHullRadius()`
 
-分析了下这个条件可能出错的原因有两个：
+分析以上条件，可能出错的原因有两个：
 1. 条件中仅考虑了目标的单位半径，是否也应该算上攻击者的单位半径。
 2. 单位的射程属性是计算模型边缘之间的距离，还是计算模型中心点之间的距离。
 
-我没有 Dota 2 自定义地图的制作经验，没有相关文档。感觉查起来会花很多时间，于是就直接改代码测试了。  
+我没有 Dota 2 自定义地图的制作经验，也没有相关文档。感觉查起来会花很多时间，于是就直接改代码测试了。  
 摸索后，感觉游戏中的距离关系应该如下图：  
 ![Distance](/img/in-post/post-autochess-code-optimization/range.jpg)
 

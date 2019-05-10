@@ -13,7 +13,10 @@ tags:
   - Bug
 ---
 
-> 最近在测试 DPS 数据时发现远程单位经常在射程足够的情况下仍然做出移动行为，所以我看了下代码尝试找出原因。
+  
+
+> 最近在测试 DPS 数据时发现远程单位经常在射程足够的情况下仍然做出移动行为。  
+> 所以我看了下代码尝试找出原因。
 
 ![Before](/img/in-post/post-autochess-code-optimization/before.gif)  
 
@@ -56,6 +59,7 @@ end
 `(u.attack_target:GetAbsOrigin() - u:GetAbsOrigin()):Length2D() < u:Script_GetAttackRange() + u.attack_target:GetHullRadius() + u:GetHullRadius()`  
 以及  
 `d < attack_range + v:GetHullRadius() + u:GetHullRadius()`  
+
 经测试，棋子不会再进行多余的移动。
 
 　
@@ -73,6 +77,6 @@ end
 
 在正确计算了攻击范围后，近战棋子也可以攻击斜方向的敌人了，而不用像以前一样必须移动到 3、6、9、12 点钟位置。  
 ![Before](/img/in-post/post-autochess-code-optimization/melee.gif)
-但以上仅修改了攻击的判断，如果要进一步优化，还需要在寻路算法上也进行修改。
+但以上仅修改了攻击的判断。如果要进一步优化，还需要在寻路算法上也进行修改。
 
 　

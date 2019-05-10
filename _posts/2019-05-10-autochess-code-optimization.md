@@ -20,25 +20,26 @@ tags:
 ## 棋子移动
 
 自走棋代码中，是通过 `local attack_result = FindAClosestEnemyAndAttack(u)` 的结果来判断棋子是进行攻击还是移动： 
-`
---决定是否要攻击
-local attack_result = FindAClosestEnemyAndAttack(u)
-if attack_result ~= nil and attack_result > 0 then
-	return attack_result + ai_delay
-end
---不攻击就走动
-if attack_result == nil then
-	--寻路
-	(略)
+
+```
+--决定是否要攻击 
+local attack_result = FindAClosestEnemyAndAttack(u) 
+if attack_result ~= nil and attack_result > 0 then 
+	return attack_result + ai_delay 
+end 
+--不攻击就走动 
+if attack_result == nil then 
+	--寻路 
+	(略) 
 	return RandomFloat(0.5,1) + ai_delay
 else
 	return 1 + ai_delay
 end
-` 
+```
 *（上面的第二个 if 也许改成 elseif 更好。）*
 
 显然是因为 `FindAClosestEnemyAndAttack(u)` 为空，所以导致了棋子进行移动。 
-接下来分析下这个函数，函数中判断射程范围内是否有敌人的条件是：
+接下来分析下这个函数，函数中判断射程范围内是否有敌人的条件是： 
 `(u.attack_target:GetAbsOrigin() - u:GetAbsOrigin()):Length2D() < u:Script_GetAttackRange() - u.attack_target:GetHullRadius()` 
 以及： 
 `d < attack_range - v:GetHullRadius()`
@@ -57,12 +58,16 @@ end
 `d < attack_range + v:GetHullRadius() + u:GetHullRadius()` 
 之后，棋子便不会再进行多余的移动了。
 
+ 
+
 ## 重复抬手
 
 尽管棋子不再移动，但还是会观察到会有攻击前摇被打断，重新抬手的问题（最容易观察到的情况是刺客跳跃后攻击要重复抬手）。 
 思考了下，可能的原因是单位有默认 AI 模板，范围内有敌方时会自动攻击。而代码中进行了一次额外的寻敌操作，会打断之前的动作。 
 在这个思路下，我删除了 `FindAClosestEnemyAndAttack` 函数中 `已经有目标` 这一段的相关代码。经过测试，棋子就不再有重复抬手的动作了。
 ![After](/img/in-post/post-autochess-code-optimization/after.gif)
+
+ 
 
 ## 近战棋子优化
 

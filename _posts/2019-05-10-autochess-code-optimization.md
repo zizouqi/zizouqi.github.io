@@ -54,7 +54,7 @@ d < attack_range - v:GetHullRadius()
 
 我没有 Dota 2 自定义地图的制作经验，没有相关文档。感觉查起来会花很多时间，于是就直接改代码测试了。 
 摸索后，感觉游戏中的距离关系应该如下图： 
-![Distance](/img/in-post/post-autochess-code-optimization/distance.jpg)
+![Distance](/img/in-post/post-autochess-code-optimization/range.jpg)
 
 将距离判断条件修改为 
 ```

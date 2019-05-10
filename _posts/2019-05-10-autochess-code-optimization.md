@@ -51,7 +51,7 @@ end
 1. 条件中仅考虑了被攻击目标的单位半径，是否也应该算上攻击者的单位半径？
 2. 单位的射程属性是计算模型边缘之间的距离，还是计算模型中心点之间的距离？
 
-我没有 Dota 2 自定义地图的制作经验，也没有相关文档。感觉查起来会花很多时间，于是就直接改代码测试了。  
+我没有 Dota 2 自定义地图的制作经验，也没有相关文档。觉得查起来有点麻烦，于是就直接改代码测试了。  
 摸索后，感觉游戏中的距离关系应该如下图：  
 ![Distance](/img/in-post/post-autochess-code-optimization/range.jpg)
 
@@ -66,7 +66,7 @@ end
 
 ## 重复抬手
 
-尽管棋子不再移动，但还是会观察到会有攻击前摇被打断，重新抬手的问题（最容易观察到的情况是刺客跳跃后攻击要重复抬手）。  
+尽管棋子不再移动，但还是会观察到有攻击前摇被打断，重新抬手的问题（最容易观察到的情况是刺客跳跃后攻击要重复抬手）。  
 思考了下，可能的原因是游戏中的单位有默认 AI 模板，当范围内有敌方时便会自动攻击。而自走棋代码中进行了一次额外的索敌操作，会打断之前的动作。  
 在这个思路下，我删除了 `FindAClosestEnemyAndAttack` 函数中 `已经有目标` 这一段的相关代码。经过测试，棋子就不再有重复抬手的动作。  
 ![After](/img/in-post/post-autochess-code-optimization/after.gif)
@@ -82,6 +82,6 @@ end
 　
 
 ## TLDR　
-[![TLDR](/img/in-post/post-autochess-code-optimization/tldr.png)](/img/in-post/post-autochess-code-optimization/tldr.png)
-
-　
+![对比](/img/in-post/post-autochess-code-optimization/combine.gif)
+[![TLDR](/img/in-post/post-autochess-code-optimization/tldr.png)](/img/in-post/post-autochess-code-optimization/tldr.png)　
+注释掉第一段以避免攻击时重复抬手，第二段修改判断条件以避免无意义移动。 

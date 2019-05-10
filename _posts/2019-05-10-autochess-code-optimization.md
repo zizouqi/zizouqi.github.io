@@ -81,8 +81,7 @@ end
 
 　
 
-## TLDR
-　
-![TLDR](/img/in-post/post-autochess-code-optimization/tldr.png)
+## TLDR　
+[![TLDR](/img/in-post/post-autochess-code-optimization/tldr.png)](/img/in-post/post-autochess-code-optimization/tldr.png)
 
 　

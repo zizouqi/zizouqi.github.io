@@ -16,6 +16,9 @@ tags:
 
 [![DPS Table](/img/in-post/post-sniper-drow-dps/table.png)](https://zizouqi.github.io/img/in-post/post-sniper-drow-dps/table.png)
 
-由于在实测中发现了一些 BUG，所以准备等开发者修复后再进行测试。
+由于发现了一些 BUG 会影响棋子的输出，所以实测就停了下来。  
+准备等开发者修复后再进行测试。
 
 详见：[自走棋代码优化：避免棋子无意义移动、重复抬手](/2019/05/10/autochess-code-optimization/)
+
+  

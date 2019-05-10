@@ -39,7 +39,6 @@ else
 	return 1 + ai_delay
 end
 ```
-*（上面的第二个 if 也许改成 elseif 更好。）*
 
 显然是因为 `FindAClosestEnemyAndAttack(u)` 为空，所以导致了棋子进行移动。  
 接下来看看这个函数，函数中判断射程范围内是否有敌人的逻辑条件是“**单位间距离**小于**射程减目标单位半径**”：  

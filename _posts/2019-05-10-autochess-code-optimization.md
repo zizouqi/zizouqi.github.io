@@ -80,3 +80,9 @@ end
 以上仅修改了攻击的判断。如果要进一步优化近战单位的 AI，也许还需要在寻路算法上也进行修改。
 
 　
+
+## TLDR
+　
+![TLDR](/img/in-post/post-autochess-code-optimization/tldr.png)
+
+　

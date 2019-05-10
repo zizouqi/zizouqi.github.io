@@ -39,7 +39,7 @@ end
 *（上面的第二个 if 也许改成 elseif 更好。）*
 
 显然是因为 `FindAClosestEnemyAndAttack(u)` 为空，所以导致了棋子进行移动。 
-接下来分析下这个函数，函数中判断射程范围内是否有敌人的条件是： 
+接下来分析下这个函数，函数中判断射程范围内是否有敌人的逻辑条件是“**单位间距离**小于**攻击范围减目标单位半径**”： 
 ```
 (u.attack_target:GetAbsOrigin() - u:GetAbsOrigin()):Length2D() < u:Script_GetAttackRange() - u.attack_target:GetHullRadius()
 ``` 
@@ -66,7 +66,7 @@ d < attack_range + v:GetHullRadius() + u:GetHullRadius()
 ``` 
 之后，棋子便不会再进行多余的移动。
 
- 
+　
 
 ## 重复抬手
 
@@ -75,7 +75,7 @@ d < attack_range + v:GetHullRadius() + u:GetHullRadius()
 在这个思路下，我删除了 `FindAClosestEnemyAndAttack` 函数中 `已经有目标` 这一段的相关代码。经过测试，棋子就不再有重复抬手的动作。
 ![After](/img/in-post/post-autochess-code-optimization/after.gif)
 
- 
+　
 
 ## 近战棋子优化
 

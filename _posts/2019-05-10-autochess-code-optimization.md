@@ -67,8 +67,9 @@ end
 
 尽管棋子不再移动，但还是会观察到有攻击前摇被打断，重新抬手的问题（最容易观察到的情况是刺客跳跃后攻击要重复抬手）。  
 思考了下，可能的原因是游戏中的单位有默认 AI 模板，当范围内有敌方时便会自动攻击。而自走棋代码中进行了一次额外的索敌操作，会打断之前的动作。  
-在这个思路下，我删除了 `FindAClosestEnemyAndAttack` 函数中 `已经有目标` 这一段的相关代码。经过测试，棋子就不再有重复抬手的动作。  
+在这个思路下，我删除了 `FindAClosestEnemyAndAttack` 函数中强行更改攻击目标的两段的相关代码。经过测试，棋子就不再有重复抬手的动作。  
 ![After](/img/in-post/post-autochess-code-optimization/after.gif)
+![Comparison](/img/in-post/post-autochess-code-optimization/comparison.gif)
 
 　
 
@@ -76,7 +77,8 @@ end
 
 在正确计算了攻击范围后，近战棋子也可以攻击斜方向的敌人了，而不用像以前一样必须移动到 3、6、9、12 点钟位置。  
 ![Before](/img/in-post/post-autochess-code-optimization/melee.gif)
-以上仅修改了攻击的判断。如果要进一步优化近战单位的 AI，也许还需要在寻路算法上也进行修改。
+以上仅修改了攻击的判断。接下来进一步优化近战单位的 AI，和上面类似需要修改 `IsGridCanAttackEnemy` 中的距离判断代码。
+![Path](/img/in-post/post-autochess-code-optimization/path.gif)
 
 　
 

@@ -84,5 +84,5 @@ end
 
 ## TLDR　
 ![对比](/img/in-post/post-autochess-code-optimization/combine.gif)
-[![TLDR](/img/in-post/post-autochess-code-optimization/tldr.png)](/img/in-post/post-autochess-code-optimization/tldr.png)　
+[![TLDR](/img/in-post/post-autochess-code-optimization/tldr.png)](/img/in-post/post-autochess-code-optimization/tldr.png)
 注释掉第一段以避免攻击时重复抬手，第二段修改判断条件以避免无意义移动。 

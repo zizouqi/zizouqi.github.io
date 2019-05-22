@@ -31,9 +31,6 @@ layout: default
 
 				{{ content }}
 
-                {% if page.hide-in-home %}
-                    test
-                {% endif %}
                 {% if not '01-01' in page.previous.url %}
                     test not
                 {% endif %}
@@ -43,21 +40,30 @@ layout: default
 
                 <hr style="visibility: hidden;">
                 <ul class="pager">
-                    {% if page.previous.url %}
-                    <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
-                        Test<br>
-                        <span>{{page.previous.title}}</span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if page.next.url %}
-                    <li class="next">
-                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
-                        Next<br>
-                        <span>{{page.next.title}}</span>
-                        </a>
-                    </li>
+                    {% if page.hide-in-home %}
+                        <li class="previous">
+                            <a href="/hikaru" data-toggle="tooltip" data-placement="top" title="栾东作品列表">
+                            Back<br>
+                            <span>栾东作品列表</span>
+                            </a>
+                        </li>
+                    {% else %}                    
+                        {% if page.previous.url %}
+                        <li class="previous">
+                            <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
+                            Previous<br>
+                            <span>{{page.previous.title}}</span>
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% if page.next.url %}
+                        <li class="next">
+                            <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
+                            Next<br>
+                            <span>{{page.next.title}}</span>
+                            </a>
+                        </li>
+                        {% endif %}
                     {% endif %}
                 </ul>
                 <hr style="visibility: hidden;">

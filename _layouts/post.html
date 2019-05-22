@@ -31,17 +31,21 @@ layout: default
 
 				{{ content }}
 
+                {% if page.multilingual %}
+                    test
+                {% endif %}
+
                 <hr style="visibility: hidden;">
                 <ul class="pager">
-                    {% if '01-01' in page.previous.url %}
+                    {% if page.previous.url %}
                     <li class="previous">
                         <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
-                        Test<br>
-                        <span>Test</span>
+                        Previous<br>
+                        <span>{{page.previous.title}}</span>
                         </a>
                     </li>
                     {% endif %}
-                    {% if page.next.url and not '01-01' in page.next.url %}
+                    {% if page.next.url %}
                     <li class="next">
                         <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
                         Next<br>

@@ -32,8 +32,9 @@ layout: default
 				{{ content }}
 
                 <hr style="visibility: hidden;">
+                {% if not '01-01' in page.previous.url %}
                 <ul class="pager">
-                    {% if page.previous.url and not '01-01' in page.previous.url %}
+                    {% if page.previous.url %}
                     <li class="previous">
                         <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
                         Previous<br>
@@ -41,7 +42,7 @@ layout: default
                         </a>
                     </li>
                     {% endif %}
-                    {% if page.next.url and not '01-01' in page.url %}
+                    {% if page.next.url %}
                     <li class="next">
                         <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
                         Next<br>
@@ -50,6 +51,7 @@ layout: default
                     </li>
                     {% endif %}         
                 </ul>
+                {% endif %}
                 <hr style="visibility: hidden;">
 
                 {% if site.disqus_username %}

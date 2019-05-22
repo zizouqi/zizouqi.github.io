@@ -41,8 +41,7 @@ layout: default
                             </a>
                         </li>
                 </ul>
-                {% endif %}
-                {% if not page.hide-in-home %}
+                {% else %}
                 <ul class="pager">
                     {% if page.previous.url %}
                         <li class="previous">

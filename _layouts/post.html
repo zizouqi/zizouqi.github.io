@@ -33,8 +33,7 @@ layout: default
 
                 <hr style="visibility: hidden;">
                 <ul class="pager">
-                {% if post.hide-in-home != 'true' %}
-                    {% if page.previous.url %}
+                    {% if page.previous.url and '-01-01-' not in page.previous.url %}
                     <li class="previous">
                         <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
                         Previous<br>
@@ -49,8 +48,7 @@ layout: default
                         <span>{{page.next.title}}</span>
                         </a>
                     </li>
-                    {% endif %}
-                {% endif %}                
+                    {% endif %}         
                 </ul>
                 <hr style="visibility: hidden;">
 

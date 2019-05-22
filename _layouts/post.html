@@ -34,6 +34,12 @@ layout: default
                 {% if page.hide-in-home %}
                     test
                 {% endif %}
+                {% if not '01-01' in page.previous.url %}
+                    test not
+                {% endif %}
+                {% if '01-01' in page.previous.url %}
+                    test in
+                {% endif %}
 
                 <hr style="visibility: hidden;">
                 <ul class="pager">

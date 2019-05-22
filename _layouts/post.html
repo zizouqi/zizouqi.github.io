@@ -35,14 +35,14 @@ layout: default
                 <ul class="pager">
                     {% if page.previous.url and not '01-01' in page.previous.url %}
                     <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="栾东作品列表">
                         test<br>
                         <span>{{page.previous.title}}</span>
                         </a>
                     </li>
                     {% elif '01-01' in page.previous.url %}
                     <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="栾东作品列表">
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
                         Previous<br>
                         <span>栾东作品列表</span>
                         </a>

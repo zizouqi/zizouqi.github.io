@@ -33,7 +33,7 @@ layout: default
 
                 <hr style="visibility: hidden;">
                 <ul class="pager">
-                {% if page.hide-in-home != 'true' %}
+                {% if post.hide-in-home != 'true' %}
                     {% if page.previous.url %}
                     <li class="previous">
                         <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">

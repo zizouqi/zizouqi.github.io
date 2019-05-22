@@ -41,6 +41,14 @@ layout: default
                             </a>
                         </li>
                     {% endif %}
+                    {% if page.next.url %}
+                        <li class="next">
+                            <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
+                            Next<br>
+                            <span>{{page.next.title}}</span>
+                            </a>
+                        </li>
+                    {% endif %}
                 </ul>
                 <hr style="visibility: hidden;">
 

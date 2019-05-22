@@ -41,7 +41,7 @@ layout: default
                         </a>
                     </li>
                     {% endif %}
-                    {% if page.next.url %}
+                    {% if page.next.url and not '01-01' in page.url %}
                     <li class="next">
                         <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
                         Next<br>

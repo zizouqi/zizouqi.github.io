@@ -32,7 +32,7 @@ layout: default
 				{{ content }}
 
                 <hr style="visibility: hidden;">
-                {% if '01-01' in page.previous.url %}
+                {% if not post.hide-in-home %}
                 <ul class="pager">
                     {% if page.previous.url %}
                     <li class="previous">

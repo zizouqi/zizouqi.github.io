@@ -40,8 +40,7 @@ layout: default
                             <span>栾东作品列表</span>
                             </a>
                         </li>
-                    {% endif %}
-                    {% if not page.hide-in-home and page.next.url %}
+                    {% else %}
                         <li class="next">
                             <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
                             Next<br>

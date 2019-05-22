@@ -32,6 +32,7 @@ layout: default
 				{{ content }}
 
                 <hr style="visibility: hidden;">
+                {% if post.hide-in-home != 'true' %}
                 <ul class="pager">
                     {% if page.previous.url %}
                     <li class="previous">
@@ -50,6 +51,7 @@ layout: default
                     </li>
                     {% endif %}
                 </ul>
+                {% endif %}
                 <hr style="visibility: hidden;">
 
                 {% if site.disqus_username %}

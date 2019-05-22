@@ -32,15 +32,19 @@ layout: default
 				{{ content }}
 
                 <hr style="visibility: hidden;">
+                {% if page.hide-in-home %}
                 <ul class="pager">
-                    {% if page.hide-in-home %}
                         <li class="previous">
                             <a href="/hikaru" data-toggle="tooltip" data-placement="top" title="栾东作品列表">
                             Back<br>
                             <span>栾东作品列表</span>
                             </a>
                         </li>
-                    {% elif page.previous.url %}
+                </ul>
+                {% endif %}
+                {% if not page.hide-in-home %}
+                <ul class="pager">
+                    {% if page.previous.url %}
                         <li class="previous">
                             <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
                             Previous<br>
@@ -57,6 +61,7 @@ layout: default
                         </li>
                     {% endif %}
                 </ul>
+                {% endif %}
                 <hr style="visibility: hidden;">
 
                 {% if site.disqus_username %}

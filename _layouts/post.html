@@ -32,19 +32,13 @@ layout: default
 				{{ content }}
 
                 <hr style="visibility: hidden;">
+                {% if '01-01' in page.previous.url %}
                 <ul class="pager">
                     {% if page.previous.url and not '01-01' in page.previous.url %}
                     <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="栾东作品列表">
-                        test<br>
-                        <span>{{page.previous.title}}</span>
-                        </a>
-                    </li>
-                    {% elif '01-01' in page.previous.url %}
-                    <li class="previous">
                         <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
                         Previous<br>
-                        <span>栾东作品列表</span>
+                        <span>{{page.previous.title}}</span>
                         </a>
                     </li>
                     {% endif %}
@@ -55,8 +49,9 @@ layout: default
                         <span>{{page.next.title}}</span>
                         </a>
                     </li>
-                    {% endif %}         
+                    {% endif %}
                 </ul>
+                {% endif %}
                 <hr style="visibility: hidden;">
 
                 {% if site.disqus_username %}

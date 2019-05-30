@@ -17,7 +17,7 @@ tags:
 
 > 攻击逻辑之后，再来看看移动行为的优化。
 
-## 基本行为
+## 棋子基本行为
 
 在自走棋中，棋子的单次移动能力和国际象棋中的皇后类似，可以在横、直、斜方向上做不限格数的移动：  
 ![Basic](/img/in-post/post-autochess-code-optimization-2-move/move-basic.jpg)

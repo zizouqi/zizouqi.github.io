@@ -22,7 +22,7 @@ tags:
 在自走棋中，棋子的单次移动能力和国际象棋中的皇后类似，可以在横、直、斜方向上做不限格数的移动：  
 ![Basic](/img/in-post/post-autochess-code-optimization-2-move/move-basic.jpg)
 
-棋子的索敌逻辑，则是优先寻找离自己最近且可以攻击到地方的格子进行移动。在一定条件下，这种方式并非为最优解，如图所示：
+棋子的索敌逻辑，则是优先寻找离自己最近且可以攻击到地方的格子进行移动。在某些情况下，这种方式并非为最优解，如图所示：
 ![Before](/img/in-post/post-autochess-code-optimization-2-move/before.gif)
 ![Issue](/img/in-post/post-autochess-code-optimization-2-move/issue.jpg)
 

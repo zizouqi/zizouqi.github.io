@@ -69,18 +69,19 @@ end
 自走棋中的寻路算法是 `function FindPath`，在这里面有对障碍物进行判断。但是这个算法牵扯的东西太多，进行修改的话非常复杂，所以我决定暂时不碰这一块，先看看有没别的解决方案。  
 
 在源代码中，我发现 `function IsGridCanReach` 的功能是输入棋子原位置和最终目标位置后，调用 FindPath 计算，再输出棋子应该移动的位置。如果目标无法直达，则 FindPath 输出的下一跳位置和预期的最终目标位置将会不同。  
-那么我们只要加上 `pos2 == IsGridCanReach(x,y,u)` （目标位置和下一跳位置相同）这个条件，就可以解决优先斜向移动带来的绕路问题。  
+那么我们只要加上 `pos2 == IsGridCanReach(x,y,u)` （目标位置必须和下一跳位置相同）这个限制条件，就可以解决优先斜向移动带来的绕路问题。  
 
-针对上面的第二个问题，可以用 `(skip_postion_alt-pos1):Length2D() > 200` （优先移动位置和原位置必须超过两格）来避免。  
+针对上面的第二个问题，可以用 `(skip_postion_alt-pos1):Length2D() > 200` （优先移动位置和棋子原位置必须超过两格）来避免。  
 
-第三个问题其实不修改的话对近战阵容来说其实是一个提升，因为可以绕过敌方的前排，直接攻击对方的脆皮输出棋子。  
-不过为了更贴近原来的移动逻辑，我们可以加上 `(skip_postion_alt-skip_postion):Length2D() < 200` 来判断优先移动位置与最近可攻击敌人的位置是否超过一格，超过的话就向距离自身最近的棋子移动。
+第三个如果不修改的话，对近战阵容来说其实是一个提升，因为一定程度上可以绕过敌方的前排，直接攻击对方的脆皮输出棋子。  
+不过为了更贴近原来的移动逻辑，我们可以加上 `(skip_postion_alt-skip_postion):Length2D() < 200` 来判断优先移动位置与最近可攻击敌人的位置是否超过一格，超过的话就仍然向距离自身最近的棋子移动。
 
 　　
 
 ## TLDR　
 ![对比](/img/in-post/post-autochess-code-optimization-2-move/move.gif)
 
+优化后的 `function FindNextSkipPosition(u)` 代码：
 ```lua
 function FindNextSkipPosition(u)
 	local team_id = u.at_team_id or u.team_id

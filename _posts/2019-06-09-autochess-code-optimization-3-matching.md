@@ -75,7 +75,7 @@ for i, v in pairs(GameRules:GetGameModeEntity().alive_player_table) do
 	table.insert(GameRules:GetGameModeEntity().current_round, home * 100 + away)
 end
 ```
-此时得到当前回合对战结果 `current_round` 为 `0907, 0706, 0608, 0809`。
+得到当前回合对战结果 `current_round` 为 `0907, 0706, 0608, 0809`。
 
 ### 避免重复对战
 预期设计：  

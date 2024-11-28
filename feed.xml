@@ -4,6 +4,10 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+    <follow_challenge>
+      <feedId>85021170333871104</feedId>
+      <userId>85012759874471936</userId>
+    </follow_challenge>
     <title>{{ site.title | xml_escape }}</title>
     <description>{{ site.description | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
@@ -28,7 +32,3 @@ layout: null
     {% endfor %}
   </channel>
 </rss>
-<follow_challenge>
-    <feedId>85021170333871104</feedId>
-    <userId>85012759874471936</userId>
-</follow_challenge>
